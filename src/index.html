@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>SIMA SD ZAHA - Administrasi Sekolah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>SD ZAINUL HASAN GENGGONG</h1>
+        <p>Sistem Informasi Manajemen Administrasi (SIMA SD ZAHA)</p>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <button onclick="switchTab('siswa')">Data Siswa</button>
+            <button onclick="switchTab('guru')">Data Guru & Karyawan</button>
+            <button onclick="switchTab('jadwal')">Jadwal Pelajaran</button>
+            <button onclick="switchTab('surat')">Surat Masuk/Keluar</button>
+        </div>
+
+        <div class="content">
+            <div class="toolbar">
+                <input type="text" id="searchInput" placeholder="Cari data (Nama/NISN/Perihal)..." onkeyup="filterTable()">
+                <button onclick="window.print()">Cetak / Export PDF</button>
+            </div>
+
+            <h2 id="sectionTitle">Data Siswa</h2>
+            <table id="dataTable">
+                <thead>
+                    <tr id="tableHeaders"></tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
